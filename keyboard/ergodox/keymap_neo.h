@@ -291,10 +291,10 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * |        |      |      |      |      |      |  Ins |           |      | Vol- |      |      |      |      |        |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |      |      |      |      |                                       |      |      |      |      |      |
+     *   |      |      | F15  | F16  | F17  |                                       | F22  | F23  | F24  |      |      |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        |      |      |       |      |      |
+     *                                        | F18  | F19  |       | F20  | F21  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |      |       |      |      |      |
      *                                 |      |      |------|       |------|      |      |
@@ -308,8 +308,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           NO,  NO,  NO,  NO,  NO,  NO,  NO,
           NO,FN12,FN13,FN14,FN15,  NO,
           NO,  NO,  NO,  NO,  NO,  NO, INS,
-          NO,  NO,  NO,  NO,  NO,
-                                        NO,  NO,
+          NO,  NO, F15, F16, F17,
+                                       F18, F19,
                                              NO,
                                    NO,  NO,  NO,
         // right hand
@@ -317,8 +317,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              FN11,VOLU, APP,  NO,  NO,  NO,  NO,
                   MUTE,MPRV,MPLY,MNXT,MSTP,  NO,
              TRNS,VOLD,  NO,  NO,  NO,  NO,  NO,
-                         NO,  NO,  NO,  NO,  NO,
-          NO,  NO,
+                        F22, F23, F24,  NO,  NO,
+         F20, F21,
           NO,
           NO,  NO,  NO
     ),
