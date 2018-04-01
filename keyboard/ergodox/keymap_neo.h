@@ -407,7 +407,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
     switch (id) {
         case KVM_SWITCH:
             return (event.pressed ?
-                    MACRO( I(50), T(LCTRL), T(LCTRL), W(255), W(255), T(ENTER), END) : MACRO_NONE);
+                    MACRO( T(LCTRL), T(LCTRL), T(ENTER), END) : MACRO_NONE);
             break;
         case SMITE_SOLO:
             return (event.pressed ?
