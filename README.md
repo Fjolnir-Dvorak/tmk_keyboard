@@ -35,9 +35,14 @@ a teensy key and my very own special macro that is intended to switch computers
 on my kvm switch. And I added some roll call macros for my favorite MOBA, 
 [Smite](http://www.smitegame.com) :)
 
+Recently I also added F15 through F24 keys to Layer5. I have a programmable 
+mouse and needed a comfortable way to map all the extra buttons to keyboard 
+buttons without interfering with anything else. Turns out that the upper half of 
+function keys are pretty much unused.
+
 ![Layout View](layout.png)
 
-[Keyboard Layout Editor link](http://www.keyboard-layout-editor.com/#/layouts/67c6725891c912c01ce3088089f5bafd)
+[Keyboard Layout Editor link](http://www.keyboard-layout-editor.com/#/gists/df1b56b4d95d14264d32ec0b44be870b)
 
 The layout on the image is as follows:
 
@@ -58,6 +63,8 @@ for more information.
 ### Layer0: Neo2 ###
 
 Standard bread and butter layer for general purpose Neo ownage :)
+
+Includes non-standard F13 and F14 keys for use as hotkeys.
 
 ### Layer1: gamer’s Neo2 ###
 

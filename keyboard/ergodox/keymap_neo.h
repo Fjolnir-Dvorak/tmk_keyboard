@@ -285,16 +285,16 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,--------------------------------------------------.           ,--------------------------------------------------.
      * | Power  |      |      |      |      |      |Teensy|           |      |      |      |      |      |      | Teensy |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |      |           | Ins  | Vol+ |  App |      |      |      |        |
+     * |        |      |      |      |      |      |      |           | KVM  | Vol+ |  App |      |      |      |        |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * |        | Solo | Mid  | ADC  | Jung |      |------|           |------| Mute | Last | Pl/Ps| Next | Stop |        |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |  KVM |           |      | Vol- |      |      |      |      |        |
+     * |        |      |      |      |      |      |  Ins |           |      | Vol- |      |      |      |      |        |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |      |      |      |      |                                       |      |      |      |      |      |
+     *   |      |      | F15  | F16  | F17  |                                       | F22  | F23  | F24  |      |      |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        |      |      |       |      |      |
+     *                                        | F18  | F19  |       | F20  | F21  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |      |       |      |      |      |
      *                                 |      |      |------|       |------|      |      |
@@ -307,18 +307,18 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          PWR,  NO,  NO,  NO,  NO,  NO,FN10,
           NO,  NO,  NO,  NO,  NO,  NO,  NO,
           NO,FN12,FN13,FN14,FN15,  NO,
-          NO,  NO,  NO,  NO,  NO,  NO,FN11,
-          NO,  NO,  NO,  NO,  NO,
-                                        NO,  NO,
+          NO,  NO,  NO,  NO,  NO,  NO, INS,
+          NO,  NO, F15, F16, F17,
+                                       F18, F19,
                                              NO,
                                    NO,  NO,  NO,
         // right hand
                NO,  NO,  NO,  NO,  NO,  NO,FN10,
-              INS,VOLU, APP,  NO,  NO,  NO,  NO,
+             FN11,VOLU, APP,  NO,  NO,  NO,  NO,
                   MUTE,MPRV,MPLY,MNXT,MSTP,  NO,
              TRNS,VOLD,  NO,  NO,  NO,  NO,  NO,
-                         NO,  NO,  NO,  NO,  NO,
-          NO,  NO,
+                        F22, F23, F24,  NO,  NO,
+         F20, F21,
           NO,
           NO,  NO,  NO
     ),
@@ -407,7 +407,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
     switch (id) {
         case KVM_SWITCH:
             return (event.pressed ?
-                    MACRO( I(50), T(LCTRL), T(LCTRL), W(255), W(255), T(ENTER), END) : MACRO_NONE);
+                    MACRO( T(LCTRL), T(LCTRL), T(ENTER), T(LCTRL), END) : MACRO_NONE);
             break;
         case SMITE_SOLO:
             return (event.pressed ?
