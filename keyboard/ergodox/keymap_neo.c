@@ -1,3 +1,9 @@
+#include <util/delay.h>
+#include "action_layer.h"
+#include "action_util.h"
+#include "bootloader.h"
+#include "keymap_common.h"
+
 /*
  * Copyright 2014 ka’imi <kaimi@kaimi.cc>
  *
@@ -31,7 +37,7 @@
  *
  */
 
-static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Keymap 0: Default Layer
      *
      * Neo2
@@ -344,7 +350,7 @@ enum macro_id {
 /*
  * Fn action definition
  */
-static const uint16_t PROGMEM fn_actions[] = {
+const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_FUNCTION(LAYER0),
     [1] = ACTION_FUNCTION(LAYER1),
     [2] = ACTION_FUNCTION(LAYER2),
